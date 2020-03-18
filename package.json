@@ -1,0 +1,27 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This is a weather application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akeren/weather-app.git"
+  },
+  "keywords": [
+    "Weather",
+    "DarkSky",
+    "Mapbox",
+    "Node.JS",
+    "request",
+    "HTTP"
+  ],
+  "author": "Kater Akeren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akeren/weather-app/issues"
+  },
+  "homepage": "https://github.com/akeren/weather-app#readme"
+}
