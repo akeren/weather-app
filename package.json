@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/akeren/weather-app/issues"
   },
-  "homepage": "https://github.com/akeren/weather-app#readme"
+  "homepage": "https://github.com/akeren/weather-app#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
