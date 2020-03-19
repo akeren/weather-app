@@ -1,8 +1,8 @@
 const axios = require('axios');
 
-const darkskyUrl =
+const darkskyURL =
   'https://api.darksky.net/forecast/29264f98e04d8987d6fec747080e51c5/37.8267,-122.4233';
-const mapboxAPIUrl =
+const geocodeURL =
   'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiYWtlcmVuIiwiYSI6ImNrN3lmNW81bzAxZnkzbXA5eDl6cmhkdjIifQ.QHY5oVZDX_gm_W_GDAw-EQ';
 
 const getWeather = async url => {
@@ -20,15 +20,19 @@ const getWeather = async url => {
   }
 };
 const getGeocode = async url => {
-  const response = await axios.get(url);
-  const features = response.data.features[0];
-  const longitude = features.center[0];
-  const latitude = features.center[1];
-  console.log(longitude, latitude);
+  try {
+    const response = await axios.get(url);
+    const features = response.data.features[0];
+    const longitude = features.center[0];
+    const latitude = features.center[1];
+    console.log(longitude, latitude);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 /*
  ** calling the function
  */
-//getWeather(darkskyUrl);
-getGeocode(mapboxAPIUrl);
+//getWeather(darkskyURL);
+getGeocode(geocodeURL);
