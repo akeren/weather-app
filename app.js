@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 const getGeocode = require('./utils/geocode');
 const getWheatherForcast = require('./utils/forcast');
 

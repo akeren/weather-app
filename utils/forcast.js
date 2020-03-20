@@ -7,9 +7,6 @@ const forcast = async (longitude, latitude, callback) => {
     const precipProbability = response.data.currently.precipProbability;
     const dailySummary = response.data.daily.data[0].summary;
     callback(undefined, {
-      temperature: temperature,
-      precipProbability: precipProbability,
-      dailySummary: dailySummary,
       message: `${dailySummary} It's currently ${temperature} degrees out. There is a ${precipProbability}% chance of rain.`
     });
   } catch (error) {
