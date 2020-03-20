@@ -5,19 +5,19 @@ const address = process.argv[2];
 if (!address) {
   console.warn('Please provide an address!');
 } else {
-  getGeocode(address, (error, response) => {
+  getGeocode(address, (error, { longitude, latitude, location }) => {
     if (error) {
       return console.error(error);
     }
-    console.log(response.location);
+    console.log(location);
     getWheatherForcast(
-      response.longitude,
-      response.latitude,
-      (error, forcastData) => {
+      longitude,
+      latitude,
+      (error, { temperature, message }) => {
         if (error) {
           return console.error(error);
         }
-        console.log(forcastData.message);
+        console.log(message);
       }
     );
   });

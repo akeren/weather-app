@@ -4,14 +4,14 @@ const geocode = async (address, callback) => {
     address
   )}.json?access_token=pk.eyJ1IjoiYWtlcmVuIiwiYSI6ImNrN3lmNW81bzAxZnkzbXA5eDl6cmhkdjIifQ.QHY5oVZDX_gm_W_GDAw-EQ`;
   try {
-    const response = await axios.get(url);
-    if (response.data.features.length === 0) {
+    const { data } = await axios.get(url);
+    if (data.features.length === 0) {
       callback('Unable to find the location. Try another search!', undefined);
     } else {
       callback(undefined, {
-        longitude: response.data.features[0].center[0],
-        latitude: response.data.features[0].center[1],
-        location: response.data.features[0].place_name
+        longitude: data.features[0].center[0],
+        latitude: data.features[0].center[1],
+        location: data.features[0].place_name
       });
     }
   } catch (error) {
