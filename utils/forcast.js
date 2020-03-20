@@ -1,6 +1,6 @@
 const axios = require('axios');
 const forcast = async (longitude, latitude, callback) => {
-  const url = `https://api.darksky.net/forecast/29264f98e04d8987d6fec747080e51c5/${latitude},${longitude}`;
+  const url = `https://api.darksky.net/forecast/${process.env.DARKSKY_SECRET_KEY}/${latitude},${longitude}`;
   try {
     const { data } = await axios.get(url);
     const temperature = data.currently.temperature;

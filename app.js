@@ -1,3 +1,4 @@
+require('dotenv').config();
 const getGeocode = require('./utils/geocode');
 const getWheatherForcast = require('./utils/forcast');
 

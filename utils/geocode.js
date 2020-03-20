@@ -2,7 +2,7 @@ const axios = require('axios');
 const geocode = async (address, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address
-  )}.json?access_token=pk.eyJ1IjoiYWtlcmVuIiwiYSI6ImNrN3lmNW81bzAxZnkzbXA5eDl6cmhkdjIifQ.QHY5oVZDX_gm_W_GDAw-EQ`;
+  )}.json?access_token=${process.env.MAPBOX_TOKEN}`;
   try {
     const { data } = await axios.get(url);
     if (data.features.length === 0) {
