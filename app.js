@@ -1,6 +1,6 @@
 require('dotenv').config();
 const getGeocode = require('./utils/geocode');
-const getWheatherForcast = require('./utils/forcast');
+const getWeatherForcast = require('./utils/forcast');
 
 const address = process.argv[2];
 if (!address) {
@@ -11,7 +11,7 @@ if (!address) {
       return console.error(error);
     }
     console.log(location);
-    getWheatherForcast(
+    getWeatherForcast(
       longitude,
       latitude,
       (error, { temperature, message }) => {

@@ -15,3 +15,10 @@
 
     "axios": "^0.19.2"
     "dotenv": "^8.2.0"
+
+## Installation Guidelines
+
+    - clone the repository
+    - cd into the cloned directory
+    - Run this via the terminal without the double quotes to install the dependencies: "npm install"
+    - Finally, run "node app.js place_name" e.g node app.js "Makurdi"
