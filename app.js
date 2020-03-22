@@ -1,25 +1,25 @@
-require('dotenv').config();
-const getGeocode = require('./utils/geocode');
-const getWeatherForcast = require('./utils/forcast');
+require('dotenv').config()
+const getGeocode = require('./utils/geocode')
+const getWeatherForcast = require('./utils/forecast')
 
-const address = process.argv[2];
+const address = process.argv[2]
 if (!address) {
-  console.warn('Please provide an address!');
+  console.warn('Please provide an address!')
 } else {
   getGeocode(address, (error, { longitude, latitude, location }) => {
     if (error) {
-      return console.error(error);
+      return console.error(error)
     }
-    console.log(location);
+    console.log(location)
     getWeatherForcast(
       longitude,
       latitude,
       (error, { temperature, message }) => {
         if (error) {
-          return console.error(error);
+          return console.error(error)
         }
-        console.log(message);
+        console.log(message)
       }
-    );
-  });
+    )
+  })
 }
