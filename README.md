@@ -11,14 +11,10 @@
 <img src="./img/results.png">
 <img src="./img/validation.png">
 
-## NPM Dependences
+## Contributing
 
-    "axios": "^0.19.2"
-    "dotenv": "^8.2.0"
+You can fork the repository and send pull request or reach out easily to me via twitter => [Kater Akeren](https://twitter.com/katerakeren)
 
-## Installation Guidelines
+## Security Vulnerabilities
 
-    - clone the repository
-    - cd into the cloned directory
-    - Run this via the terminal without the double quotes to install the dependencies: "npm install"
-    - Finally, run "node app.js place_name" e.g node app.js "Makurdi"
+If you discover a security vulnerability within the project, please create an issue. All security vulnerabilities will be promptly addressed and appreciated.
