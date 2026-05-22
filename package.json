@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/akeren/weather-app#readme",
   "dependencies": {
-    "axios": "^1.6.0",
+    "axios": "^1.15.2",
     "dotenv": "^8.2.0"
   }
 }
